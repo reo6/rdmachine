@@ -6,9 +6,8 @@ use gtk::{
 };
 use crate::pads::Pad;
 use crate::pads::get_btn_by_id;
-use crate::pads::audio::sample::Sample;
-use crate::pads::audio::sample_player::load_test_samples;
-use crate::pads::audio::sample_player::SamplePlayer;
+use crate::pads::sample_player::load_test_samples;
+use crate::pads::sample_player::SamplePlayer;
 use std::sync::Arc;
 
 mod pads;
