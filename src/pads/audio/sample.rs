@@ -1,14 +1,17 @@
-use std::io::BufReader;
 use std::fs::File;
+use std::io::Read;
 
 pub struct Sample {
-    pub file: File,
+    raw_audio: Vec<u8>
 }
 
 impl Sample {
-    pub fn new(file: File) -> Self {
+    pub fn new(mut file: File) -> Self {
+        let mut raw_audio: Vec<u8> = vec![];
+        file.read_to_end(&mut raw_audio).unwrap();
+
         Self {
-            file: file
+            raw_audio: raw_audio
         }
     }
 }
