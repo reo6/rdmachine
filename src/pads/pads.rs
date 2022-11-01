@@ -22,8 +22,7 @@ impl Pad {
     fn on_click(&self) {
         match &self.sample {
             Some(s) => {
-                let cl = s.file.try_clone().expect("Failed to clone.");
-                &self.sample_player.play_sample(cl);
+                &self.sample_player.play_sample(s);
             },
             None => (),
         }

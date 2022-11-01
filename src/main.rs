@@ -6,9 +6,10 @@ use gtk::{
 };
 use crate::pads::Pad;
 use crate::pads::get_btn_by_id;
-use crate::pads::sample_player::load_test_samples;
 use crate::pads::sample_player::SamplePlayer;
+use crate::pads::sample::Sample;
 use std::sync::Arc;
+use std::fs::File;
 
 mod pads;
 
@@ -36,7 +37,7 @@ fn generate_pads(builder: &Builder, n: i32, sample_player: Arc<SamplePlayer>) ->
         padvec.push(Pad::new(
             i,
             get_btn_by_id(i, builder).expect("Couldn't get button."),
-            Some(load_test_samples(TEST_SAMPLE_PATH)),
+            Some(Sample::new(File::open(TEST_SAMPLE_PATH).unwrap())),
             Arc::clone(&sample_player),
         ));
     }

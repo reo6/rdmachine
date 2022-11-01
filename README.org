@@ -2,9 +2,5 @@
 
 Not done yet. Simple drum machine.
 
-** Bugs
-- Audio delay.
-- Same sample object is not valid after playing it once.
-
 ** Todo
 - Feature: Selecting samples with GtkFileChooserDialog.

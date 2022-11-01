@@ -1,6 +1,6 @@
 use rodio::{Decoder, OutputStream, Source, OutputStreamHandle};
-use std::io::BufReader;
-use std::fs::File;
+use crate::pads::sample::Sample;
+use std::io::Cursor;
 
 pub struct SamplePlayer {
     output_handle: OutputStreamHandle,
@@ -13,8 +13,10 @@ impl SamplePlayer {
         Self { output_handle: stream_handle, stream: _stream }
     }
 
-    pub fn play_sample(&self, file: File) {
-        let decoder = Decoder::new(BufReader::new(file)).unwrap();
-        &self.output_handle.play_raw(decoder.convert_samples());
+    pub fn play_sample(&self, sample: &Sample) {
+        let cloned_raw = sample.raw_audio.clone();
+        let cursor = Cursor::new(cloned_raw);
+        let source = Decoder::new(cursor).unwrap();
+        &self.output_handle.play_raw(source.convert_samples());
     }
 }

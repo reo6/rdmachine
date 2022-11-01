@@ -2,7 +2,7 @@ use std::fs::File;
 use std::io::Read;
 
 pub struct Sample {
-    raw_audio: Vec<u8>
+    pub raw_audio: Vec<u8>
 }
 
 impl Sample {
