@@ -36,7 +36,7 @@ fn generate_pads(builder: &Builder, n: i32, sample_player: Arc<SamplePlayer>) ->
     for i in 1..(n+1) {
         padvec.push(Pad::new(
             i,
-            get_btn_by_id(i, builder).expect("Couldn't get button."),
+            get_btn_by_id(i, builder).expect("Couldn't get pad."),
             Some(Sample::new(File::open(TEST_SAMPLE_PATH).unwrap())),
             Arc::clone(&sample_player),
         ));
