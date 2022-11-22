@@ -2,6 +2,9 @@
 <!-- Created with Cambalache 0.10.3 -->
 <interface>
   <!-- interface-name rdmachine.ui -->
+  <!-- interface-description Rdmachine project UI file. -->
+  <!-- interface-authors ramazanemreosmanoglu <ramazanemre@protonmail.com>
+ -->
   <requires lib="gtk" version="4.6"/>
   <object class="GtkApplicationWindow" id="main-window">
     <property name="default-height">400</property>
@@ -19,84 +22,7 @@
         <property name="row-homogeneous">True</property>
         <property name="row-spacing">5</property>
         <child>
-          <object class="GtkButton" id="pad-1">
-            <property name="label">Pad 1</property>
-            <layout>
-              <property name="column">0</property>
-              <property name="column-span">1</property>
-              <property name="row">2</property>
-              <property name="row-span">1</property>
-            </layout>
-          </object>
-        </child>
-        <child>
-          <object class="GtkButton" id="pad-5">
-            <property name="label">Pad 5</property>
-            <layout>
-              <property name="column">0</property>
-              <property name="column-span">1</property>
-              <property name="row">1</property>
-              <property name="row-span">1</property>
-            </layout>
-          </object>
-        </child>
-        <child>
-          <object class="GtkButton" id="pad-9">
-            <property name="label">Pad 9</property>
-            <layout>
-              <property name="column">0</property>
-              <property name="column-span">1</property>
-              <property name="row">0</property>
-              <property name="row-span">1</property>
-            </layout>
-          </object>
-        </child>
-        <child>
-          <object class="GtkButton" id="pad-10">
-            <property name="label">Pad 10</property>
-            <layout>
-              <property name="column">1</property>
-              <property name="column-span">1</property>
-              <property name="row">0</property>
-              <property name="row-span">1</property>
-            </layout>
-          </object>
-        </child>
-        <child>
-          <object class="GtkButton" id="pad-11">
-            <property name="label">Pad 11</property>
-            <layout>
-              <property name="column">2</property>
-              <property name="column-span">1</property>
-              <property name="row">0</property>
-              <property name="row-span">1</property>
-            </layout>
-          </object>
-        </child>
-        <child>
-          <object class="GtkButton" id="pad-12">
-            <property name="label">Pad 12</property>
-            <layout>
-              <property name="column">3</property>
-              <property name="column-span">1</property>
-              <property name="row">0</property>
-              <property name="row-span">1</property>
-            </layout>
-          </object>
-        </child>
-        <child>
-          <object class="GtkButton" id="pad-13">
-            <property name="label">Pad 13</property>
-            <layout>
-              <property name="column">0</property>
-              <property name="column-span">1</property>
-              <property name="row">-1</property>
-              <property name="row-span">1</property>
-            </layout>
-          </object>
-        </child>
-        <child>
-          <object class="GtkButton" id="pad-14">
+          <object class="GtkLabel" id="pad-14">
             <property name="label">Pad 14</property>
             <layout>
               <property name="column">1</property>
@@ -107,7 +33,100 @@
           </object>
         </child>
         <child>
-          <object class="GtkButton" id="pad-6">
+          <object class="GtkLabel" id="pad-1">
+            <property name="label">Pad 1</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="column-span">1</property>
+              <property name="row">2</property>
+              <property name="row-span">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="pad-5">
+            <property name="label">Pad 5</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="column-span">1</property>
+              <property name="row">1</property>
+              <property name="row-span">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="pad-9">
+            <property name="label">Pad 9</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="column-span">1</property>
+              <property name="row">0</property>
+              <property name="row-span">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="pad-10">
+            <property name="label">Pad 10</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="column-span">1</property>
+              <property name="row">0</property>
+              <property name="row-span">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="pad-11">
+            <property name="label">Pad 11</property>
+            <layout>
+              <property name="column">2</property>
+              <property name="column-span">1</property>
+              <property name="row">0</property>
+              <property name="row-span">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="pad-12">
+            <property name="label">Pad 12</property>
+            <layout>
+              <property name="column">3</property>
+              <property name="column-span">1</property>
+              <property name="row">0</property>
+              <property name="row-span">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="pad-13">
+            <property name="label">Pad 13</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="row">-1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="pad-15">
+            <property name="label">Pad 15</property>
+            <layout>
+              <property name="column">2</property>
+              <property name="row">-1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="pad-16">
+            <property name="label">Pad 16</property>
+            <layout>
+              <property name="column">3</property>
+              <property name="row">-1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="pad-6">
             <property name="label">Pad 6</property>
             <layout>
               <property name="column">1</property>
@@ -118,7 +137,7 @@
           </object>
         </child>
         <child>
-          <object class="GtkButton" id="pad-2">
+          <object class="GtkLabel" id="pad-2">
             <property name="label">Pad 2</property>
             <layout>
               <property name="column">1</property>
@@ -129,7 +148,7 @@
           </object>
         </child>
         <child>
-          <object class="GtkButton" id="pad-7">
+          <object class="GtkLabel" id="pad-7">
             <property name="label">Pad 7</property>
             <layout>
               <property name="column">2</property>
@@ -140,7 +159,7 @@
           </object>
         </child>
         <child>
-          <object class="GtkButton" id="pad-8">
+          <object class="GtkLabel" id="pad-8">
             <property name="label">Pad 8</property>
             <layout>
               <property name="column">3</property>
@@ -151,7 +170,7 @@
           </object>
         </child>
         <child>
-          <object class="GtkButton" id="pad-3">
+          <object class="GtkLabel" id="pad-3">
             <property name="label">Pad 3</property>
             <layout>
               <property name="column">2</property>
@@ -162,29 +181,7 @@
           </object>
         </child>
         <child>
-          <object class="GtkButton" id="pad-15">
-            <property name="label">Pad 15</property>
-            <layout>
-              <property name="column">2</property>
-              <property name="column-span">1</property>
-              <property name="row">-1</property>
-              <property name="row-span">1</property>
-            </layout>
-          </object>
-        </child>
-        <child>
-          <object class="GtkButton" id="pad-16">
-            <property name="label">Pad 16</property>
-            <layout>
-              <property name="column">3</property>
-              <property name="column-span">1</property>
-              <property name="row">-1</property>
-              <property name="row-span">1</property>
-            </layout>
-          </object>
-        </child>
-        <child>
-          <object class="GtkButton" id="pad-4">
+          <object class="GtkLabel" id="pad-4">
             <property name="label">Pad 4</property>
             <layout>
               <property name="column">3</property>

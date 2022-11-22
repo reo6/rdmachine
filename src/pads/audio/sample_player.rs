@@ -17,6 +17,6 @@ impl SamplePlayer {
         let cloned_raw = sample.raw_audio.clone();
         let cursor = Cursor::new(cloned_raw);
         let source = Decoder::new(cursor).unwrap();
-        &self.output_handle.play_raw(source.convert_samples());
+        let _ = &self.output_handle.play_raw(source.convert_samples());
     }
 }
