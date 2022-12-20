@@ -14,4 +14,9 @@ impl Sample {
             raw_audio: raw_audio
         }
     }
+
+    pub fn new_from_filepath(path: String) -> Self {
+        let f = File::open(path).unwrap();
+        Self::new(f)
+    }
 }
