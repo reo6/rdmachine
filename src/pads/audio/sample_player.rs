@@ -1,7 +1,7 @@
-use rodio::{Decoder, OutputStream, Source, OutputStreamHandle};
+use rodio::{OutputStream, OutputStreamHandle};
 use crate::pads::sample::Sample;
-use std::io::Cursor;
 
+#[allow(dead_code)]
 pub struct SamplePlayer {
     output_handle: OutputStreamHandle,
     stream: OutputStream,
@@ -14,9 +14,6 @@ impl SamplePlayer {
     }
 
     pub fn play_sample(&self, sample: &Sample) {
-        let cloned_raw = sample.raw_audio.clone();
-        let cursor = Cursor::new(cloned_raw);
-        let source = Decoder::new(cursor).unwrap();
-        let _ = &self.output_handle.play_raw(source.convert_samples());
+        let _ = &self.output_handle.play_raw(sample.raw_audio.clone());
     }
 }

@@ -1,17 +1,18 @@
 use std::fs::File;
-use std::io::Read;
+use rodio::{Decoder, Source};
+use rodio::source::{SamplesConverter, Buffered};
 
 pub struct Sample {
-    pub raw_audio: Vec<u8>
+    pub raw_audio: SamplesConverter<Buffered<Decoder<File>>, f32>,
 }
 
 impl Sample {
-    pub fn new(mut file: File) -> Self {
-        let mut raw_audio: Vec<u8> = vec![];
-        file.read_to_end(&mut raw_audio).unwrap();
+    pub fn new(file: File) -> Self {
+        let source = Decoder::new(file).unwrap();
+        let buffer = source.buffered();
 
         Self {
-            raw_audio: raw_audio
+            raw_audio: buffer.convert_samples(),
         }
     }
 
