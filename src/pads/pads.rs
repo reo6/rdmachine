@@ -28,7 +28,6 @@ impl Pad {
     fn on_click(&self) {
         match &self.sample {
             Some(s) => {
-                println!("Pressed");
                 let _ = &self.sample_player.play_sample(s);
             },
             None => (),
