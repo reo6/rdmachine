@@ -4,3 +4,4 @@ Not done yet. Simple drum machine.
 
 ** Todo
 - Feature: Selecting samples with GtkFileChooserDialog.
+- Note to self: This is not low-level programming, next time use portaudio for handling audio stuff.
